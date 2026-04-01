@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Personalized Experience</title>
+    <title>Event Registration</title>
 
     <style>
         body {
@@ -71,87 +71,20 @@
 <body>
 
     <header>
-        <h1 id="greeting">Welcome</h1>
+        <h1 id="greeting">Register event</h1>
     </header>
 
     <div class="container">
 
-        <!-- Electronics Section -->
-        <div id="electronicsSection" class="section">
-            <h2>⚡ Latest Electronics for You</h2>
-
-            <div class="card">
-                <img src="https://via.placeholder.com/200" alt="Phone">
-                <h3>Smartphone</h3>
-                <p>Latest Android device</p>
-                <a href="#" class="btn">Buy Now</a>
-            </div>
-
-            <div class="card">
-                <img src="https://via.placeholder.com/200" alt="Laptop">
-                <h3>Laptop</h3>
-                <p>High performance laptop</p>
-                <a href="#" class="btn">Buy Now</a>
-            </div>
-
+        <div data-form-id='430d2062-5f0d-f111-8407-000d3ab38362'
+            data-form-api-url='https://public-eur.mkt.dynamics.com/api/v1.0/orgs/377f7dd7-e701-f111-8c79-002248a15041/landingpageforms'
+            data-cached-form-url='https://assets-eur.mkt.dynamics.com/377f7dd7-e701-f111-8c79-002248a15041/digitalassets/forms/430d2062-5f0d-f111-8407-000d3ab38362'>
         </div>
 
-        <!-- Clothes Section -->
-        <div id="clothesSection" class="section">
-            <h2>👕 Trending Fashion Collection</h2>
-
-            <div class="card">
-                <img src="https://via.placeholder.com/200" alt="Shirt">
-                <h3>Casual Shirt</h3>
-                <p>Comfortable and stylish</p>
-                <a href="#" class="btn">Shop Now</a>
-            </div>
-
-            <div class="card">
-                <img src="https://via.placeholder.com/200" alt="Jacket">
-                <h3>Jacket</h3>
-                <p>Perfect for winter</p>
-                <a href="#" class="btn">Shop Now</a>
-            </div>
-
-        </div>
-
-        <!-- Default Section -->
-        <div id="defaultSection" class="section">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Select your interest to explore personalized content.</p>
-        </div>
 
     </div>
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const interest = params.get("interest");
-        const name = params.get("name");
-
-        // Greeting personalization
-        if (name) {
-            document.getElementById("greeting").innerText = "Hi " + name;
-        } else {
-            document.getElementById("greeting").innerText = "Welcome";
-        }
-
-        // Hide all sections
-        document.getElementById("electronicsSection").style.display = "none";
-        document.getElementById("clothesSection").style.display = "none";
-        document.getElementById("defaultSection").style.display = "none";
-
-        // Show based on interest
-        if (interest === "Electronics") {
-            document.getElementById("electronicsSection").style.display = "block";
-        }
-        else if (interest === "Clothes") {
-            document.getElementById("clothesSection").style.display = "block";
-        }
-        else {
-            document.getElementById("defaultSection").style.display = "block";
-        }
-    </script>
+    <script src='https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/eur/FormLoader/FormLoader.bundle.js'></script>
 
 </body>
 
