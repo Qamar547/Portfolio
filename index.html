@@ -812,13 +812,14 @@
             overflow: hidden;
             transition: all 0.3s ease;
             border: 1px solid rgba(64, 224, 208, 0.1);
-            width: calc(33.333% - 20px);
-            /* 3 cards per row with gaps */
+            width: calc(50% - 20px);
+            /* Changed from 33.333% to 50% for 2 cards per row */
+            /* REMOVE or change this: */
             min-width: 300px;
-            /* Minimum width for responsiveness */
+            /* Changed from 600px to something smaller */
+            /* OR completely remove min-width if not needed */
             transform-origin: center center;
             position: relative;
-            overflow: hidden;
         }
 
         .projects-container {
@@ -865,7 +866,7 @@
 
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(530px, 1fr));
             gap: 30px;
             margin-top: 30px;
         }
@@ -1259,6 +1260,19 @@
         #experience {
             min-height: auto;
             padding: 80px 0;
+        }
+
+        .current-badge {
+            display: inline-block;
+            margin-left: 10px;
+            padding: 6px 10px;
+            background: #00c853;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 20px;
+            vertical-align: middle;
+            letter-spacing: 0.3px;
         }
 
         .timeline {
@@ -1823,15 +1837,15 @@
                         <h1 class="name">Qamar Zaman</h1>
                         <h2 class="job-title">Microsoft Dynamics 365 CRM<span> Developer</span></h2>
                         <p class="description">
-                            Microsoft Dynamics 365 CRM Developer with expertise in C#, .NET, JavaScript, SQL, and Power
-                            Platform. Skilled in building custom plugins, workflows, and CRM Custom APIs to extend
-                            functionality. Experienced in performance optimization and security/role management,
-                            delivering scalable solutions that improve efficiency and user adoption.
+                            <b>Dynamics 365 CRM Developer</b> with expertise in Dynamics 365 CRM, Dataverse, C#,
+                            .NET, JavaScript, and Power Platform. Experienced in designing and implementing custom
+                            plugins, workflow activities, custom APIs, Power Automate solutions, Customer Insights –
+                            Journeys, and SharePoint integrations to deliver scalable, business-focused CRM solutions
                         </p>
 
                         <!-- Two buttons container -->
                         <div class="button-container">
-                            <a href="#" class="cta-button" id="resumeBtn">
+                            <a href="images/Qamar_Zaman_CV.pdf" class="cta-button" target="_blank">
                                 <i class="fas fa-file-alt"></i> View Resume
                             </a>
                             <a href="#contact" class="cta-button btn-secondary">
@@ -1841,18 +1855,15 @@
 
                         <!-- Social links -->
                         <div class="social-links">
-                            <a href="#" class="social-icon">
+                            <!-- <a href="#" class="social-icon">
                                 <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="social-icon">
+                            </a> -->
+                            <a href="https://linkedin.com/in/qamar-zaman-42366a287" class="social-icon">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="#" class="social-icon">
+                            <!-- <a href="#" class="social-icon">
                                 <i class="fab fa-codepen"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-dribbble"></i>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
 
@@ -1864,7 +1875,7 @@
                         <div class="ring ring-3"></div>
 
                         <!-- Profile image -->
-                        <img src="Images/Profile1.png" alt="Qamar Zaman" class="profile-image">
+                        <img src="Images/Profile.png" alt="Qamar Zaman" class="profile-image">
                     </div>
                 </div>
             </div>
@@ -1876,54 +1887,68 @@
                 <h2 class="section-title">My Projects</h2>
                 <div class="projects-container">
 
+                    <!-- Netceed -->
+                    <div class="project-card">
+                        <img src="Images/Netceed.jpg" alt="Dynamics 365 CRM Project" class="project-img">
+                        <div class="project-content">
+                            <h3 class="project-title">Netceed</h3>
+                            <p class="project-description">
+                                Dynamics 365 Customer Insights – Journeys implementation for marketing automation and
+                                customer engagement.
+                                <br><br>
+                                • Configured real-time customer journeys, segments, and marketing forms<br>
+                                • Customized Customer Insights using JavaScript and C# plugins<br>
+                                • Automated lead processing and marketing operations with Power Automate<br>
+                                • Integrated Customer Insights with Dynamics 365 CRM for lead management<br>
+                            </p>
+                        </div>
+                    </div>
+
                     <!-- GAMMA -->
                     <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                            alt="Dynamics 365 CRM Project" class="project-img">
+                        <img src="Images/Gamma.jpg" alt="Dynamics 365 CRM Project" class="project-img">
                         <div class="project-content">
                             <h3 class="project-title">GAMMA</h3>
                             <p class="project-description">
-                                Dynamics 365 CRM solution with custom plugins, workflows, and Power Platform
-                                integrations.
+                                Enterprise Dynamics 365 CRM solution featuring document automation, Reporting and
+                                SharePoint integration.
                                 <br><br>
-                                • Developed and customized plugins using C#/.NET<br>
-                                • Enhanced CRM forms with JavaScript customizations<br>
-                                • Automated workflows with Power Automate<br>
-                                • Built Power BI reports integrated with CRM data<br>
+                                • Developed configurable Word/PDF document generation with template versioning<br>
+                                • Built custom entities, ribbon commands, and business logic using C# and JavaScript<br>
+                                • Integrated Dynamics 365 CRM with SharePoint for automated document storage<br>
+                                • Developed paginated reports using Power BI Report Builder and SQL datasets<br>
                             </p>
                         </div>
                     </div>
 
                     <!-- OMAC -->
                     <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                            alt="Dynamics 365 CRM Project" class="project-img">
+                        <img src="Images/omac.jpg" alt="Dynamics 365 CRM Project" class="project-img">
                         <div class="project-content">
                             <h3 class="project-title">OMAC</h3>
                             <p class="project-description">
-                                Dynamics 365 CRM project focused on custom business logic and reporting.
+                                Dynamics 365 CRM solution focused on business automation and operational reporting.
                                 <br><br>
-                                • Created and deployed custom plugins in CRM<br>
-                                • Enhanced forms and views with JavaScript<br>
-                                • Implemented workflow automation via Power Automate<br>
-                                • Developed Power BI reports for real-time analytics<br>
+                                • Developed custom CRM plugins using C# to implement business logic<br>
+                                • Enhanced CRM forms and views with JavaScript customizations<br>
+                                • Automated business processes using Power Automate<br>
+                                • Designed Dynamics 365 SSRS reports with SQL-based datasets<br>
                             </p>
                         </div>
                     </div>
 
                     <!-- Teranoid -->
                     <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                            alt="POS Application Project" class="project-img">
+                        <img src="Images/Teranoid.jpg" alt="POS Application Project" class="project-img">
                         <div class="project-content">
                             <h3 class="project-title">Teranoid</h3>
                             <p class="project-description">
                                 Point of Sale (POS) application built with .NET Core and ASP.NET.
                                 <br><br>
-                                • Implemented front-end features with HTML, CSS, JavaScript, jQuery<br>
-                                • Developed backend services using .NET Core and C#<br>
-                                • Collaborated on business logic design and API integration<br>
-                                • Participated in debugging, fixes, and feature enhancements<br>
+                                • Developed backend services using C# and .NET Core<br>
+                                • Built responsive UI components with HTML, CSS, JavaScript, and jQuery<br>
+                                • Integrated business logic and third-party APIs<br>
+                                • Participated in debugging, testing, and feature enhancements<br>
                             </p>
                         </div>
                     </div>
@@ -1944,25 +1969,33 @@
                         <div class="timeline-marker">
                             <i class="fas fa-laptop-code timeline-icon"></i>
                         </div>
+
                         <div class="timeline-content">
-                            <div class="date">Oct-2024 - Present</div>
-                            <h2 class="job-title">Senior Microsoft Dynamics 365 CRM Developer</h2>
-                            <div class="company"><i class="fas fa-building"></i> SkySoft Connections.</div>
+                            <div class="date">Oct 2025 – Present <span class="current-badge">Current</span></div>
+
+                            <h2 class="job-title">Microsoft Dynamics 365 CRM Developer</h2>
+
+                            <div class="company">
+                                <i class="fas fa-building"></i> SkySoft Connections
+                            </div>
+
                             <p class="description">
-                                Architected and customized Dynamics 365 CRM solutions, including entities, forms, views,
-                                and dashboards.
-                                Developed advanced plugins, workflows, and CRM Custom APIs using C#/.NET.
-                                Optimized CRM performance through data model improvements and automation.
-                                Mentored junior developers and led code reviews to ensure best practices and quality
-                                delivery.
+                                Deliver enterprise Dynamics 365 CRM solutions using C#, Dataverse, and Power Platform.
+                                Develop custom plugins,
+                                workflow activities, and integrations while implementing Customer Insights – Journeys,
+                                SharePoint integration,
+                                and business process automation. Collaborate with stakeholders, mentor junior
+                                developers, and support solution
+                                delivery from design to production.
                             </p>
+
                             <div class="tech-tags">
                                 <span class="tech-tag">Dynamics 365 CRM</span>
-                                <span class="tech-tag">Power Platform</span>
-                                <span class="tech-tag">SQL Server</span>
-                                <span class="tech-tag">Power BI Reports</span>
-                                <span class="tech-tag">Custom APIs</span>
-                                <span class="tech-tag">Word Document templates</span>
+                                <span class="tech-tag">Dataverse</span>
+                                <span class="tech-tag">Customer Insights</span>
+                                <span class="tech-tag">Power Automate</span>
+                                <span class="tech-tag">SharePoint</span>
+                                <span class="tech-tag">C#</span>
                             </div>
                         </div>
                     </div>
@@ -1972,53 +2005,103 @@
                         <div class="timeline-marker">
                             <i class="fas fa-laptop-code timeline-icon"></i>
                         </div>
+
                         <div class="timeline-content">
-                            <div class="date">Oct-2023 - Sep-2024</div>
+                            <div class="date">Oct 2024 – Sep 2025</div>
+
                             <h2 class="job-title">Associate Microsoft Dynamics 365 CRM Consultant</h2>
-                            <div class="company"><i class="fas fa-building"></i> SkySoft Connections.</div>
+
+                            <div class="company">
+                                <i class="fas fa-building"></i> SkySoft Connections
+                            </div>
+
                             <p class="description">
-                                Gained hands-on experience with Dynamics 365 CRM entities, forms, views, and dashboards.
-                                Assisted in developing plugins and workflows using C#/.NET.
-                                Implemented Power Automate flows and Canvas Apps to automate business processes.
-                                Collaborated with senior developers to understand requirements and deliver solutions.
+                                Customized Dynamics 365 CRM by configuring entities, forms, views, dashboards, and
+                                business rules.
+                                Developed C# plugins, custom APIs, and JavaScript customizations while building Power
+                                Automate flows,
+                                Canvas Apps, and integrations with external systems using REST APIs and Microsoft Graph
+                                API.
                             </p>
+
                             <div class="tech-tags">
-                                <span class="tech-tag">C#/.NET</span>
                                 <span class="tech-tag">Dynamics 365 CRM</span>
+                                <span class="tech-tag">Plugins</span>
                                 <span class="tech-tag">Power Automate</span>
                                 <span class="tech-tag">Canvas Apps</span>
-                                <span class="tech-tag">JavaScript Webresourses</span>
+                                <span class="tech-tag">Microsoft Graph API</span>
+                                <span class="tech-tag">JavaScript</span>
                             </div>
                         </div>
                     </div>
-
 
                     <!-- Experience 3 -->
                     <div class="timeline-item">
                         <div class="timeline-marker">
-                            <i class="fas fa-graduation-cap timeline-icon"></i>
+                            <i class="fas fa-laptop-code timeline-icon"></i>
                         </div>
+
                         <div class="timeline-content">
-                            <div class="date">Jan-2022 - Aug-2023</div>
-                            <h2 class="job-title">Junior .NET Developer</h2>
-                            <div class="company"><i class="fas fa-building"></i> Deltron Systems.</div>
+                            <div class="date">Oct 2023 – Sep 2024</div>
+
+                            <h2 class="job-title">Junior Microsoft Dynamics 365 CRM Consultant</h2>
+
+                            <div class="company">
+                                <i class="fas fa-building"></i> SkySoft Connections
+                            </div>
+
                             <p class="description">
-                                Contributed to the development and maintenance of internal business applications using
-                                the .NET ecosystem. Gained hands-on experience with C#, ASP.NET, and database
-                                integration while following established software development lifecycles. Assisted in
-                                debugging, testing, and implementing new features under the guidance of senior team
-                                members.
+                                Assisted in customizing Dynamics 365 CRM entities, forms, views, and business rules.
+                                Implemented JavaScript
+                                form customizations, supported plugin development and testing, created FetchXML queries,
+                                and participated
+                                in solution deployment, testing, and production support.
                             </p>
+
                             <div class="tech-tags">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">Dynamics 365 CRM</span>
                                 <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Bootstrap</span>
-                                <span class="tech-tag">C#</span>
-                                <span class="tech-tag">.Net Framework</span>
+                                <span class="tech-tag">Plugins</span>
+                                <span class="tech-tag">FetchXML</span>
+                                <span class="tech-tag">Dataverse</span>
+                                <span class="tech-tag">Testing</span>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Experience 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-code timeline-icon"></i>
+                        </div>
+
+                        <div class="timeline-content">
+                            <div class="date">Jan 2022 – Aug 2023</div>
+
+                            <h2 class="job-title">.NET Developer</h2>
+
+                            <div class="company">
+                                <i class="fas fa-building"></i> Deltron Systems
+                            </div>
+
+                            <p class="description">
+                                Developed backend applications using C# and .NET Core while working with SQL Server,
+                                MySQL, and Entity Framework Core.
+                                Built responsive web interfaces using JavaScript, HTML, CSS, and Bootstrap, and
+                                automated business processes using Selenium WebDriver.
+                            </p>
+
+                            <div class="tech-tags">
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">.NET Core</span>
+                                <span class="tech-tag">ASP.NET Core</span>
+                                <span class="tech-tag">Entity Framework Core</span>
+                                <span class="tech-tag">SQL Server</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -2027,40 +2110,56 @@
         <section id="skills">
             <div class="section-container">
                 <h2 class="section-title">My Skills</h2>
+
                 <div class="skills-container">
+
                     <div class="skill-category">
                         <h3>Dynamics 365 CRM</h3>
                         <ul class="skill-list">
-                            <li>Entities, Forms, Views, Dashboards</li>
-                            <li>Plugins & Custom Workflows</li>
-                            <li>Custom APIs</li>
-                            <li>Power Automate</li>
-                            <li>Canvas Apps</li>
-                            <li>Integration with SharePoint & Outlook</li>
+                            <li>Dataverse, Entities, Forms & Views</li>
+                            <li>Plugins & Custom Workflow Activities</li>
+                            <li>Custom APIs & JavaScript</li>
+                            <li>Ribbon Customization & Business Rules</li>
+                            <li>Customer Insights – Journeys</li>
+                            <li>FetchXML & Solution Management</li>
                         </ul>
                     </div>
+
+                    <div class="skill-category">
+                        <h3>Power Platform</h3>
+                        <ul class="skill-list">
+                            <li>Power Automate</li>
+                            <li>Power Apps (Canvas Apps)</li>
+                            <li>SharePoint Integration</li>
+                            <li>Microsoft Graph API</li>
+                        </ul>
+                    </div>
+
                     <div class="skill-category">
                         <h3>.NET Development</h3>
                         <ul class="skill-list">
                             <li>C#</li>
-                            <li>.NET Core</li>
-                            <li>ASP.NET MVC</li>
-                            <li>Entity Framework</li>
+                            <li>.NET Core / ASP.NET Core</li>
+                            <li>Entity Framework Core</li>
                             <li>LINQ</li>
-                            <li>SQL Server</li>
+                            <li>REST APIs</li>
+                            <li>SQL Server & MySQL</li>
                         </ul>
                     </div>
-                    <div class="skill-category">
-                        <h3>Tools & Technologies</h3>
-                        <ul class="skill-list">
-                            <li>Visual Studio / VS Code</li>
-                            <li>Git & GitHub</li>
-                            <li>Postman</li>
-                            <li>Agile/Scrum Methodologies</li>
-                        </ul>
-                    </div>
-                </div>
 
+                    <div class="skill-category">
+                        <h3>Tools & Reporting</h3>
+                        <ul class="skill-list">
+                            <li>Visual Studio & VS Code</li>
+                            <li>XrmToolBox</li>
+                            <li>Postman</li>
+                            <li>Power BI Report Builder</li>
+                            <li>SSRS Reporting</li>
+                            <li>Azure AD App Registrations</li>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
         </section>
 
@@ -2070,98 +2169,28 @@
                 <h2 class="section-title">Education</h2>
 
                 <div class="timeline">
-                    <!-- Education 1 - Also updated with same format -->
+
+                    <!-- Education 1 - UPDATED TO MATCH IMAGE -->
                     <div class="timeline-item">
                         <div class="timeline-marker">
                             <i class="fas fa-graduation-cap timeline-icon"></i>
                         </div>
                         <div class="timeline-content">
-                            <div class="date">2020 - 2022</div>
-                            <h2 class="job-title">Master of Computer Science</h2>
-                            <div class="company"><i class="fas fa-university"></i> Stanford University</div>
-
-                            <!-- Location and CGPA inline -->
-                            <div class="education-details" style="margin: 15px 0; padding-left: 0; border-left: none;">
-                                <div class="detail-item" style="margin-bottom: 8px; color: #ccc;">
-                                    <span class="detail-icon"><i class="fas fa-map-marker-alt"></i></span>
-                                    <span>Stanford, California, USA</span>
-                                </div>
-                                <div class="detail-item" style="margin-bottom: 20px; color: #40e0d0; font-weight: 600;">
-                                    <span class="detail-icon"><i class="fas fa-star"></i></span>
-                                    <span>GPA: 3.9/4.0</span>
-                                </div>
-                            </div>
-
-                            <!-- Description -->
-                            <p class="description">
-                                Specialized in Artificial Intelligence with a focus on advanced neural networks for
-                                computer vision.
-                                Graduated with Honors and was included in the Dean's List for academic excellence.
-                                Completed a thesis on "Advanced Neural Networks for Computer Vision" which was published
-                                in a peer-reviewed journal.
-                                Participated in various research projects involving machine learning and data science
-                                applications.
-                            </p>
-
-                            <!-- Relevant Coursework Section -->
-                            <div class="coursework-section">
-                                <h4
-                                    style="color: #40e0d0; margin-bottom: 15px; font-size: 1.2rem; display: flex; align-items: center;">
-                                    <i class="fas fa-book" style="margin-right: 10px;"></i>
-                                    Key Focus Areas:
-                                </h4>
-
-                                <div class="coursework-grid">
-                                    <div class="coursework-item">
-                                        <i class="fas fa-robot" style="color: #9370db; margin-right: 10px;"></i>
-                                        <span>Machine Learning</span>
-                                    </div>
-                                    <div class="coursework-item">
-                                        <i class="fas fa-brain" style="color: #9370db; margin-right: 10px;"></i>
-                                        <span>Deep Learning</span>
-                                    </div>
-                                    <div class="coursework-item">
-                                        <i class="fas fa-eye" style="color: #9370db; margin-right: 10px;"></i>
-                                        <span>Computer Vision</span>
-                                    </div>
-                                    <div class="coursework-item">
-                                        <i class="fas fa-language" style="color: #9370db; margin-right: 10px;"></i>
-                                        <span>Natural Language Processing</span>
-                                    </div>
-                                    <div class="coursework-item">
-                                        <i class="fas fa-project-diagram"
-                                            style="color: #9370db; margin-right: 10px;"></i>
-                                        <span>Data Structures</span>
-                                    </div>
-                                    <div class="coursework-item">
-                                        <i class="fas fa-chart-line" style="color: #9370db; margin-right: 10px;"></i>
-                                        <span>Data Science</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Education 2 - UPDATED TO MATCH IMAGE -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <i class="fas fa-graduation-cap timeline-icon"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="date">2016 - 2020</div>
+                            <div class="date">2017 - 2021</div>
                             <h2 class="job-title">Bachelor of Computer Science</h2>
-                            <div class="company"><i class="fas fa-university"></i> University of Technology, Karachi
+                            <div class="company"><i class="fas fa-university"></i> Sarhad University of Science &
+                                Information Technology
                             </div>
 
                             <!-- Location and CGPA inline -->
                             <div class="education-details" style="margin: 15px 0; padding-left: 0; border-left: none;">
                                 <div class="detail-item" style="margin-bottom: 8px; color: #ccc;">
                                     <span class="detail-icon"><i class="fas fa-map-marker-alt"></i></span>
-                                    <span>Karachi, Pakistan</span>
+                                    <span>Peshawar, Pakistan</span>
                                 </div>
                                 <div class="detail-item" style="margin-bottom: 20px; color: #40e0d0; font-weight: 600;">
                                     <span class="detail-icon"><i class="fas fa-star"></i></span>
-                                    <span>CGPA: 3.7/4.0</span>
+                                    <span>CGPA: 3.1/4.0</span>
                                 </div>
                             </div>
 
@@ -2202,6 +2231,42 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Education 2 - Diploma of Associate Engineering -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-graduation-cap timeline-icon"></i>
+                        </div>
+
+                        <div class="timeline-content">
+                            <div class="date">2013 - 2016</div>
+
+                            <h2 class="job-title">Diploma of Associate Engineering (Civil Engineering)</h2>
+
+                            <div class="company">
+                                <i class="fas fa-university"></i>
+                                Kotal Institute of Technology
+                            </div>
+
+                            <div class="education-details" style="margin: 15px 0; padding-left: 0; border-left: none;">
+
+                                <div class="detail-item" style="margin-bottom: 8px; color: #ccc;">
+                                    <span class="detail-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </span>
+                                    <span>Kohat, Pakistan</span>
+                                </div>
+
+                                <div class="detail-item" style="color: #40e0d0; font-weight: 600;">
+                                    <span class="detail-icon">
+                                        <i class="fas fa-certificate"></i>
+                                    </span>
+                                    <span>Specialization: Civil Engineering</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -2218,7 +2283,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Email</h4>
-                                <p>alex@ui-dev-portfolio.com</p>
+                                <p>qamarzaman547@gmail.com</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -2227,7 +2292,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Phone</h4>
-                                <p>+1 (555) 123-4567</p>
+                                <p>+92 333 5151574</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -2236,25 +2301,30 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Location</h4>
-                                <p>San Francisco, CA</p>
+                                <p>Islamabad, Paksitan</p>
                             </div>
                         </div>
                     </div>
                     <div class="contact-form">
                         <form id="contactForm">
+
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your Name" required>
+                                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
                             </div>
+
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your Email" required>
+                                <input type="text" id="subject" class="form-control" placeholder="Subject" required>
                             </div>
+
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Subject" required>
+                                <textarea id="message" class="form-control" placeholder="Your Message"
+                                    required></textarea>
                             </div>
-                            <div class="form-group">
-                                <textarea class="form-control" placeholder="Your Message" required></textarea>
-                            </div>
-                            <button type="submit" class="submit-btn">Send Message</button>
+
+                            <button type="submit" class="submit-btn">
+                                Send Message
+                            </button>
+
                         </form>
                     </div>
                 </div>
@@ -2450,6 +2520,20 @@
 
             // Start loading simulation with less delay
             setTimeout(simulateLoading, 200);
+
+            // ========== CONTACT FORM SUBMISSION ==========
+            document.getElementById("contactForm").addEventListener("submit", function (e) {
+
+                e.preventDefault();
+
+                const name = document.getElementById("name").value;
+                const subject = document.getElementById("subject").value;
+                const message = document.getElementById("message").value;
+
+                const body = `${message}`;
+
+                window.location.href = `mailto:qamarzaman547@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            });
         });
 
         // ========== PARTICLE NETWORK BACKGROUND ==========
@@ -2753,19 +2837,6 @@
                 }
             });
         }
-
-        // ========== RESUME BUTTON FUNCTIONALITY ==========
-        document.getElementById('resumeBtn').addEventListener('click', function (e) {
-            e.preventDefault();
-            alert('Resume download would start here. In a real implementation, this would link to your resume PDF.');
-        });
-
-        // ========== CONTACT FORM SUBMISSION ==========
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
 
         // ========== EXPERIENCE TIMELINE ANIMATION ==========
         const timelineObserverOptions = {
